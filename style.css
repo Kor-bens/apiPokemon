@@ -97,6 +97,16 @@ a{
 
 }
 
+#pokedex{
+    font-size: 2.8em;
+
+}
+
+#add-pokemon{
+    font-size: 2.8em;
+
+}
+
 #pokedex-container{
     display:flex;
     flex-wrap: wrap;
@@ -162,17 +172,46 @@ display: flex;
 justify-content: center;
 }
 
-#title-add-pokemon{
-    font-family: "pokemon-hollow";
-    color: yellow;
-    -webkit-text-stroke: 3px #0d4c99;
-    font-size: 2em;
-}
 
+
+#title-add-pokemon{
+   text-align: center;
+   font-size: 2.2em;
+font-family: "pokemon-hollow";
+    color: yellow;
+    -webkit-text-stroke: 1.5px #0d4c99;
+    
+}
 #form-add-container{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     width: 20%;
-    
+    line-height: 2;
+    margin: 0 auto;
+}
+.put-button{
+    margin-top: 10px;
+}
+
+.put-button:hover{
+    background-color:yellow;
+}
+
+.picture-pokemon{
+    max-width: 215px;
+}
+
+#edit-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#edit-form{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    line-height: 2;
+    margin-top: 2vh;
+
 }

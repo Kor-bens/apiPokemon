@@ -68,6 +68,9 @@ app.put("/api/pokemons/:id", (req, res) => {
   });
   const message = `Le pokémon ${pokemonUpdated.name} a bien été modifié.`;
   res.json(success(message, pokemonUpdated));
+
+  const fileContent = `const pokemons = ${JSON.stringify(pokemons, null, 2)};\n\nmodule.exports = pokemons;`;
+  fs.writeFileSync("mock-pokemon.js", fileContent);
 });
 
 app.delete("/api/pokemons/:id", (req, res) => {
@@ -76,6 +79,9 @@ app.delete("/api/pokemons/:id", (req, res) => {
   pokemons = pokemons.filter((pokemon) => pokemon.id !== id);
   const message = `Le pokémon ${pokemonDeleted.name} a bien été supprimé.`;
   res.json(success(message, pokemonDeleted));
+
+  const fileContent = `const pokemons = ${JSON.stringify(pokemons, null, 2)};\n\nmodule.exports = pokemons;`;
+  fs.writeFileSync("mock-pokemon.js", fileContent);
 });
 
 app.listen(port, () =>

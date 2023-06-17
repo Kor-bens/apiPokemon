@@ -1,13 +1,12 @@
 const pokemons = [
   {
     "id": 1,
-    "name": "Bulbizarre",
-    "hp": 25,
-    "cp": 5,
+    "name": "Bulbizzare",
+    "hp": 28,
+    "cp": 6,
     "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
     "types": [
-      "Plante",
-      "Poison"
+      "Plante"
     ],
     "created": "2023-06-16T17:02:11.274Z"
   },
@@ -42,18 +41,6 @@ const pokemons = [
     "types": [
       "Insecte",
       "Poison"
-    ],
-    "created": "2023-06-16T17:02:11.274Z"
-  },
-  {
-    "id": 5,
-    "name": "Roucool",
-    "hp": 30,
-    "cp": 7,
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/016.png",
-    "types": [
-      "Normal",
-      "Vol"
     ],
     "created": "2023-06-16T17:02:11.274Z"
   },
@@ -136,91 +123,15 @@ const pokemons = [
     "created": "2023-06-16T17:02:11.274Z"
   },
   {
-    "nom": "azdazd",
-    "type": "azdzad",
-    "imageSrc": "azdazd",
-    "hp": "azdazd",
-    "cp": "azdazda",
-    "id": 13,
-    "created": "2023-06-16T17:02:22.887Z"
-  },
-  {
-    "nom": "Tortosa",
-    "type": "feu",
-    "imageSrc": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
-    "hp": "4",
-    "cp": "5",
-    "id": 14,
-    "created": "2023-06-16T17:08:17.954Z"
-  },
-  {
-    "nom": "Tortosa",
-    "type": "ddd",
-    "imageSrc": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
-    "hp": "5",
-    "cp": "0.1",
-    "id": 15,
-    "created": "2023-06-16T17:12:19.340Z"
-  },
-  {
-    "nom": "gezgezg",
-    "type": "ezgezggz",
-    "imageSrc": "zregrezgzre",
-    "hp": "ezgezgez",
-    "cp": "ezgezgez",
-    "id": 16,
-    "created": "2023-06-16T17:33:51.822Z"
-  },
-  {
-    "nom": "rgrezg",
-    "type": "zgzez",
-    "imageSrc": "ezgezgz",
-    "hp": "ezgzgz",
-    "cp": "ezgez",
-    "id": 17,
-    "created": "2023-06-16T17:37:35.412Z"
-  },
-  {
-    "nom": "ttt",
-    "type": "ttt",
-    "imageSrc": "tttt",
-    "hp": "tttt",
-    "cp": "tttt",
-    "id": 18,
-    "created": "2023-06-16T17:38:51.154Z"
-  },
-  {
-    "name": "fszf",
+    "name": "poisson",
     "types": [
-      "aaa"
+      "eau"
     ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
-    "hp": "4",
-    "cp": "5",
-    "id": 19,
-    "created": "2023-06-16T17:45:04.023Z"
-  },
-  {
-    "name": "e\"&\"",
-    "types": [
-      "ezrez"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
-    "hp": "er",
-    "cp": "erez",
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png",
+    "hp": 5,
+    "cp": 5,
     "id": 20,
     "created": "2023-06-16T17:51:21.642Z"
-  },
-  {
-    "name": "zregzreg",
-    "types": [
-      "ergre"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
-    "hp": "regreg",
-    "cp": "regreg",
-    "id": 21,
-    "created": "2023-06-16T22:58:49.850Z"
   }
 ];
 
