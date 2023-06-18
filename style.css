@@ -77,16 +77,14 @@ src: local("font-family/Pokemon_Hollow.ttf") format('ttf');
 ul{
     margin: 0;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
 
 }
 
 li{
     font-family: "pokemon-hollow";
-    
+    padding: 0 3em 0 3em;
     list-style-type: none;
-    display: flex;
     
 }
 
@@ -113,6 +111,8 @@ a{
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 5vh;
+    /* margin-left: 20vw;
+    margin-right: 20vw; */
 }
 
 .pokemon-block{
@@ -218,26 +218,8 @@ font-family: "pokemon-hollow";
 
 }
 
-@media only screen and (min-width: 2560px) {
-   #title-pokemon{
-    font-size: 3em;
-   }
-
-   #nav{
-    font-size: 2em;
-    margin-top: -5vh;
-   }
-
-   #pokedex{
-    -webkit-text-stroke: 7px #0d4c99;
-}
-
-#add-pokemon{
-    -webkit-text-stroke: 7px #0d4c99;
 
 
-}
-}
 
 @media only screen and (min-width: 768px ) and (max-width: 1068px) {
     #title-pokemon{
@@ -246,18 +228,13 @@ font-family: "pokemon-hollow";
    }
    
     #nav{
-   margin: 0;
      font-size: 1em;
      margin-top: -7vh;
-     
+        margin: 0;
+
      
     }
 
-    *{
-        border: 1px solid red;
-    }
-
- 
     #pokedex{
      -webkit-text-stroke: 4px #0d4c99;
      line-height: 1.5;
@@ -270,12 +247,12 @@ font-family: "pokemon-hollow";
  }
 
  ul{
+    
     flex-direction: column;
  }
 
  #pokedex-container{
     display: flex;
-    width: 500px;
     margin-top: 5vh;
  }
 
@@ -295,9 +272,23 @@ font-family: "pokemon-hollow";
  }
 }
 
- @media only screen and (min-width: 320px ) and (max-width: 767) {
+ @media only screen and (min-width: 320px ) and (max-width: 767px) {
    #title-pokemon{
-    font-size: 10em;
+    font-size: 2em;
    }
 
+   ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+
+   #nav{
+    margin-top: -6vh;
+    margin: 0;
+    line-height: 1.5;
+   }
+   #pokedex-container{
+    margin-top: 5vh;
+   }
  }
