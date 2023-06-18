@@ -15,56 +15,57 @@ src: local("font-family/Pokemon_Hollow.ttf") format('ttf');
 #title-pokemon{
     text-align: center;
     margin: 0;
-    font-size: 8em;
+    font-size: 2em;
     font-family: "pokemon-hollow", "pokemon-solid";
     color: yellow;
     -webkit-text-stroke: 3px #0d4c99;
+    margin-top: -8vh;
 }
 
 #P{
     display: inline-block;
     transform-origin: bottom;
     transform: scaleY(1) translateX(5px);
-    font-size: 1em;
+    font-size: 4em;
 }
 
 #o{
     display: inline-block;
   transform-origin: bottom;
   transform: scaleY(1.1) translateX(-7px);
-  font-size: 0.8em;
+  font-size: 3em;
 }
 
 #K{
     display: inline-block;
     transform-origin: bottom;
     transform: scaleY(1.2) translateX(-8px);
-    font-size: 0.8em;
+    font-size: 3em;
 }
 
 #é{
     display: inline-block;
     transform-origin: bottom;
     transform: scaleY(1.3) translateX(-8px);
-    font-size: 0.8em;
+    font-size: 3em;
 }
 #M{
     display: inline-block;
     transform-origin: bottom;
     transform: scaleY(1.1) translateX(-10px);
-    font-size: 1em;
+    font-size: 3em;
 }
 #o-2{
     display: inline-block;
     transform-origin: bottom;
     transform: scaleY(1.2) translateX(-20px);
-    font-size: 0.8em;
+    font-size: 3em;
 }
 #N{
     display: inline-block;
     transform-origin: bottom;
     transform: scaleY(1.1) translateX(-25px);
-    font-size: 0.8em;
+    font-size: 3em;
 }
 
 #nav{
@@ -111,6 +112,7 @@ a{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 .pokemon-block{
@@ -215,3 +217,87 @@ font-family: "pokemon-hollow";
     margin-top: 2vh;
 
 }
+
+@media only screen and (min-width: 2560px) {
+   #title-pokemon{
+    font-size: 3em;
+   }
+
+   #nav{
+    font-size: 2em;
+    margin-top: -5vh;
+   }
+
+   #pokedex{
+    -webkit-text-stroke: 7px #0d4c99;
+}
+
+#add-pokemon{
+    -webkit-text-stroke: 7px #0d4c99;
+
+
+}
+}
+
+@media only screen and (min-width: 768px ) and (max-width: 1068px) {
+    #title-pokemon{
+        text-align: center;
+     font-size: 2em;
+   }
+   
+    #nav{
+   margin: 0;
+     font-size: 1em;
+     margin-top: -7vh;
+     
+     
+    }
+
+    *{
+        border: 1px solid red;
+    }
+
+ 
+    #pokedex{
+     -webkit-text-stroke: 4px #0d4c99;
+     line-height: 1.5;
+ }
+ 
+ #add-pokemon{
+     -webkit-text-stroke: 4px #0d4c99;
+     line-height: 1.5;
+     padding-top: 25px;
+ }
+
+ ul{
+    flex-direction: column;
+ }
+
+ #pokedex-container{
+    display: flex;
+    width: 500px;
+    margin-top: 5vh;
+ }
+
+ #add-pokemon-container{
+    margin-top: -8vh;
+    margin-bottom: 5vh;
+ }
+ #title-add-pokemon{
+    margin: 0;
+    font-size: 1.8em;
+    -webkit-text-stroke: 1.5px #0d4c99;
+
+ }
+
+ .label-pokemon{
+    font-size: 1.5em;
+ }
+}
+
+ @media only screen and (min-width: 320px ) and (max-width: 767) {
+   #title-pokemon{
+    font-size: 10em;
+   }
+
+ }

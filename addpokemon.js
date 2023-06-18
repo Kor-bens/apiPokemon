@@ -62,7 +62,7 @@ function addPokemon() {
   inputAddContainerCp.required = true;
   buttonAdd.type = "submit";
 
-  titleAddContainer.textContent = "Ajouter un nouveau pokémon";
+  titleAddContainer.textContent = "Crée ou ajoute un pokémon";
   labelAddContainerName.textContent = "nom";
   labelAddContainerImg.textContent = "url de l'image";
   labelAddContainerType.textContent = "type";
