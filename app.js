@@ -46,7 +46,7 @@ app.get("/api/pokemons/:name", (req, res) => {
   const namePokemon = req.params.name;
   const pokemon = pokemons.find((pokemon) => pokemon.name === namePokemon)
   const message = "un pokémon a été attrapé";
-  res.json(success(message, pokemon));
+  res.send(success(message, pokemon));
 })
 
 app.get("/api/pokemons/:id", (req, res) => {

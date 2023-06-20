@@ -1,8 +1,12 @@
+  const descriptionPage = document.querySelector
+  
+  
+  
+  
+  
+  
   const searchBlock = document.querySelector("#search-block");
 
-   
-
-   
 // Fonction pour afficher les Pokémon
 
 function displayPokemon() {
@@ -30,6 +34,96 @@ function displayPokemon() {
       searchBlock.appendChild(inputSearchBar);
       searchBlock.appendChild(buttonSearchButton);
 
+      
+  //CHERCHER UN POKEMON
+   //CHERCHER UN POKEMON
+   buttonSearchButton.addEventListener("click", () => {
+    const pokemonName = inputSearchBar.value; // Utiliser value au lieu de name
+
+    pokedexContainer.innerHTML = "";
+
+    fetch(`http://localhost:3000/api/pokemons/${pokemonName}`, {
+      method: "GET",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Erreur HTTP " + response.status);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const pokemon = data.data;
+        if (pokemon) {
+          const pokemonDetailsContainer = document.createElement("div");
+          pokemonDetailsContainer.innerHTML = `
+            <h2>${pokemon.name}</h2>
+            <img src="${pokemon.picture}" alt="${pokemon.name}">`;
+          pokedexContainer.appendChild(pokemonDetailsContainer);
+        } else {
+          const error = document.createElement("p");
+          error.id="error";
+          error.textContent = "Aucun Pokémon trouvé avec ce nom.";
+          console.log("Aucun Pokémon trouvé avec ce nom.");
+          document.body.appendChild(error);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
+
+  inputSearchBar.addEventListener("input", () => {
+    const pokemonName = inputSearchBar.value;
+    searchPokemons(pokemonName);
+  });
+
+//   function searchPokemons(pokemonName) {
+//   // Réinitialiser le contenu du conteneur de la pokédex
+//   pokedexContainer.innerHTML = "";
+
+//   // Effectuer une requête GET pour obtenir la liste des Pokémon correspondant au nom
+//   fetch(`http://localhost:3000/api/pokemons?name=${pokemonName}`)
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error("Erreur HTTP " + response.status);
+//       }
+//       return response.json();
+//     })
+//     .then((dataPokemons) => {
+//       const filteredPokemons = dataPokemons.data;
+//       if (filteredPokemons.length > 0) {
+//         filteredPokemons.forEach((pokemon) => {
+//           // Créer les éléments HTML pour afficher chaque Pokémon
+
+//           // Créer un élément <div> pour le Pokémon
+//           const pokemonDiv = document.createElement("div");
+//           pokemonDiv.classList.add("pokemon");
+
+//           // Créer un élément <img> pour l'image du Pokémon
+//           const imageElement = document.createElement("img");
+//           imageElement.src = pokemon.imageUrl;
+//           imageElement.alt = pokemon.name;
+
+//           // Créer un élément <h2> pour le nom du Pokémon
+//           const nameElement = document.createElement("h2");
+//           nameElement.textContent = pokemon.name;
+
+//           // Ajouter l'image et le nom du Pokémon à l'élément <div> du Pokémon
+//           pokemonDiv.appendChild(imageElement);
+//           pokemonDiv.appendChild(nameElement);
+
+//           // Ajouter l'élément <div> du Pokémon au conteneur de la Pokédex
+//           pokedexContainer.appendChild(pokemonDiv);
+//         });
+//       } else {
+//         console.log("Aucun Pokémon trouvé avec ce nom.");
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Une erreur s'est produite :", error);
+//     });
+// }
+  
   // Effectuer une requête GET pour obtenir la liste des Pokémon
   fetch("http://localhost:3000/api/pokemons")
     .then((response) => {
@@ -118,22 +212,7 @@ function displayPokemon() {
         });
 
        
-          //CHERCHER UN POKEMON
-          buttonSearchButton.addEventListener("click", () => {
-           pokedexContainer.innerHTML ="";
-           pokemonName = pokemon.name;
-
-           fetch(`http://localhost:3000/api/pokemons/${pokemonName}`, {
-            method: "GET",
-          })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Erreur HTTP " + response.status);
-            }
-            return response.json();
-          })
-
-          })
+        
           
         
 

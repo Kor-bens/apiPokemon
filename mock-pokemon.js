@@ -319,6 +319,17 @@ const pokemons = [
     "cp": 5,
     "id": 43,
     "created": "2023-06-20T12:41:24.671Z"
+  },
+  {
+    "name": "walid",
+    "types": [
+      "radin"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png",
+    "hp": 0,
+    "cp": 0,
+    "id": 44,
+    "created": "2023-06-20T17:29:06.758Z"
   }
 ];
 
