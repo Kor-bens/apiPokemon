@@ -373,3 +373,12 @@ background-color: #0d4c99;
  #error{
     color: red;
  }
+
+ .name{
+    color: white;
+ }
+ .hp, .cp, .type{
+    color: white;
+ }
+
+ 

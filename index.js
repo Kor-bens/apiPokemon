@@ -56,8 +56,11 @@ function displayPokemon() {
         if (pokemon) {
           const pokemonDetailsContainer = document.createElement("div");
           pokemonDetailsContainer.innerHTML = `
-            <h2>${pokemon.name}</h2>
-            <img src="${pokemon.picture}" alt="${pokemon.name}">`;
+            <h2 class="name">${pokemon.name}</h2>
+            <img src="${pokemon.picture}" alt="${pokemon.name}">
+            <p class="type">types: ${pokemon.types}</p>
+            <p class="hp">hp: ${pokemon.hp}</p>
+            <p class="cp">cp: ${pokemon.cp}</p>`;
           pokedexContainer.appendChild(pokemonDetailsContainer);
         } else {
           const error = document.createElement("p");
