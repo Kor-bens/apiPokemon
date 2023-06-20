@@ -14,7 +14,7 @@ function displayPokemon() {
       const labelSearch = document.createElement("p");
       labelSearch.for = "label-search-pokemon";
       labelSearch.id="label-search-pokemon";
-      labelSearch.textContent = "attrape un pokémon";
+      labelSearch.textContent = "attrape un pokémon :";
 
       const inputSearchBar = document.createElement("input");
       inputSearchBar.type ="search";
@@ -117,9 +117,30 @@ function displayPokemon() {
             });
         });
 
+       
+          //CHERCHER UN POKEMON
+          buttonSearchButton.addEventListener("click", () => {
+           pokedexContainer.innerHTML ="";
+           pokemonName = pokemon.name;
+
+           fetch(`http://localhost:3000/api/pokemons/${pokemonName}`, {
+            method: "GET",
+          })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Erreur HTTP " + response.status);
+            }
+            return response.json();
+          })
+
+          })
+          
+        
+
         // Fonction pour afficher le formulaire de modification
         function displayEditForm(pokemon) {
           pokedexContainer.innerHTML = "";
+          searchBlock.innerHTML ="";
 
           const editContainer = document.createElement("div");
           editContainer.id = "edit-container";
@@ -221,9 +242,10 @@ function displayPokemon() {
 
           function displayVisualizedPokemon(pokemon) {
 
+           
             const existingVisualizedBlock = editContainer.querySelector("#visualized-pokemon-block");
   if (existingVisualizedBlock) {
-    existingVisualizedBlock.remove(); // Supprimer l'ancien bloc s'il existe
+    existingVisualizedBlock.remove(); 
   }
             const visualizedPokemonBlock = document.createElement("div");
             visualizedPokemonBlock.id = "visualized-pokemon-block";
