@@ -49,7 +49,7 @@ const pokemons = [
     "name": "Rattata",
     "hp": 18,
     "cp": 6,
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/019.png",
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
     "types": [
       "Normal"
     ],
@@ -127,11 +127,198 @@ const pokemons = [
     "types": [
       "eau"
     ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png",
-    "hp": 5,
-    "cp": 5,
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
+    "hp": 55,
+    "cp": 5555,
     "id": 20,
     "created": "2023-06-16T17:51:21.642Z"
+  },
+  {
+    "name": "egregergerger",
+    "types": [
+      "aefefzegzegzeg"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png",
+    "hp": 5,
+    "cp": 555,
+    "id": 21,
+    "created": "2023-06-19T07:25:32.961Z"
+  },
+  {
+    "name": "olivia",
+    "types": [
+      "antillais"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/521.png",
+    "hp": 100,
+    "cp": 100,
+    "id": 23,
+    "created": "2023-06-19T08:36:37.684Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/521.png",
+    "hp": "5",
+    "cp": "8",
+    "id": 24,
+    "created": "2023-06-19T12:40:29.061Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
+    "hp": "5",
+    "cp": "5",
+    "id": 25,
+    "created": "2023-06-19T12:40:41.620Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/073.png",
+    "hp": "5",
+    "cp": "2",
+    "id": 26,
+    "created": "2023-06-19T12:43:23.135Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
+    "hp": "5",
+    "cp": "8",
+    "id": 27,
+    "created": "2023-06-19T12:48:36.630Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
+    "hp": "5",
+    "cp": "2",
+    "id": 28,
+    "created": "2023-06-19T12:48:50.339Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
+    "hp": "5",
+    "cp": "2",
+    "id": 29,
+    "created": "2023-06-19T12:52:08.819Z"
+  },
+  {
+    "name": "zfefezf",
+    "types": [
+      "zefezfezfze"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
+    "hp": 5,
+    "cp": 5,
+    "id": 32,
+    "created": "2023-06-19T13:58:46.927Z"
+  },
+  {
+    "name": "tgterg",
+    "types": [
+      "ergre"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
+    "hp": "ergre",
+    "cp": "ergerge",
+    "id": 33,
+    "created": "2023-06-19T13:59:17.571Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
+    "hp": "8",
+    "cp": "8",
+    "id": 34,
+    "created": "2023-06-19T14:35:12.913Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
+    "hp": "7",
+    "cp": "2",
+    "id": 35,
+    "created": "2023-06-19T14:35:28.692Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
+    "hp": "5",
+    "cp": "9",
+    "id": 36,
+    "created": "2023-06-19T14:44:12.014Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
+    "hp": "r",
+    "cp": "e",
+    "id": 37,
+    "created": "2023-06-19T14:46:15.997Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "eau"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
+    "hp": "8",
+    "cp": "5",
+    "id": 38,
+    "created": "2023-06-20T06:46:12.619Z"
+  },
+  {
+    "name": "zefezfez",
+    "types": [
+      "zefezf"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
+    "hp": "ff",
+    "cp": "fff",
+    "id": 41,
+    "created": "2023-06-20T06:56:11.989Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "aze"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
+    "hp": "5",
+    "cp": "5",
+    "id": 42,
+    "created": "2023-06-20T06:57:09.861Z"
   }
 ];
 

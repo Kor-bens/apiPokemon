@@ -1,21 +1,34 @@
-// const searchBlock = document.createElement("div");
-//         const searchBar = document.createElement("input");
-//         const searchButton = document.createElement('button');
+  const searchBlock = document.querySelector("#search-block");
 
-//         searchBlock.id="search-block";
-//         searchBar.id ="search-bar";
-//         searchBar.type ="search";
-//         searchBar.name = "searchBar";
-//         searchButton.id="search-button";
-//         searchButton.textContent = "Rechercher";
-// import { putButton, pokedexContainer, pokemonBlock, picturePokemon, typePokemon, hpPokemon, cpPokemon, buttonBlock, removeButton} from './const.js';
+   
 
+   
 // Fonction pour afficher les Pokémon
+
 function displayPokemon() {
   // history.pushState(null, "", "/pokemons");
 
   // Réinitialiser le contenu du conteneur de la pokédex
   pokedexContainer.innerHTML = "";
+
+      const labelSearch = document.createElement("p");
+      labelSearch.for = "label-search-pokemon";
+      labelSearch.id="label-search-pokemon";
+      labelSearch.textContent = "attrape un pokémon";
+
+      const inputSearchBar = document.createElement("input");
+      inputSearchBar.type ="search";
+      inputSearchBar.id="search-bar";
+      inputSearchBar.name="search-bar";
+      inputSearchBar.placeholder = "Nom du pokemon";
+
+      const buttonSearchButton = document.createElement("button");
+      buttonSearchButton.id="search-button";
+      buttonSearchButton.textContent ="Rechercher";
+
+      searchBlock.appendChild(labelSearch);
+      searchBlock.appendChild(inputSearchBar);
+      searchBlock.appendChild(buttonSearchButton);
 
   // Effectuer une requête GET pour obtenir la liste des Pokémon
   fetch("http://localhost:3000/api/pokemons")
@@ -28,7 +41,6 @@ function displayPokemon() {
     .then((dataPokemons) => {
       // Récupérer les Pokémon depuis la réponse
       pokemons = dataPokemons.data;
-
       // Parcourir chaque Pokémon
 
       pokemons.forEach((pokemon) => {
@@ -69,9 +81,6 @@ function displayPokemon() {
 
         // picturePokemon.setAttribute("/", `pokemon.html?id=${pokemon.id}`);
 
-        //  pokedexContainer.appendChild(searchBlock);
-        //   searchBlock.appendChild(searchBar);
-        //    searchBlock.appendChild(searchButton)
         pokedexContainer.appendChild(pokemonBlock);
         pokemonBlock.appendChild(namePokemon);
         pokemonBlock.appendChild(picturePokemon);
@@ -166,6 +175,10 @@ function displayPokemon() {
           editForm.appendChild(cpLabel);
           editForm.appendChild(cpInput);
 
+          const visualizeButton  =document.createElement("button");
+          visualizeButton.textContent = "Visualiser";
+          editForm.appendChild(visualizeButton);
+
           const saveButton = document.createElement("button");
           saveButton.textContent = "Enregistrer";
           editForm.appendChild(saveButton);
@@ -204,10 +217,57 @@ function displayPokemon() {
           selectedPokemonContainer.appendChild(selectedTypePokemon);
           selectedPokemonContainer.appendChild(selectedHpPokemon);
           selectedPokemonContainer.appendChild(selectedCpPokemon);
-
-          editContainer.appendChild(editForm);
           editContainer.appendChild(selectedPokemonContainer);
 
+          function displayVisualizedPokemon(pokemon) {
+
+            const existingVisualizedBlock = editContainer.querySelector("#visualized-pokemon-block");
+  if (existingVisualizedBlock) {
+    existingVisualizedBlock.remove(); // Supprimer l'ancien bloc s'il existe
+  }
+            const visualizedPokemonBlock = document.createElement("div");
+            visualizedPokemonBlock.id = "visualized-pokemon-block";
+        
+            const visualizedNamePokemon = document.createElement("h2");
+            const visualizedPicturePokemon = document.createElement("img");
+            const visualizedTypePokemon = document.createElement("p");
+            const visualizedHpPokemon = document.createElement("p");
+            const visualizedCpPokemon = document.createElement("p");
+        
+            visualizedNamePokemon.classList.add("name-pokemon");
+            visualizedPicturePokemon.classList.add("picture-pokemon");
+            visualizedTypePokemon.classList.add("type-pokemon");
+            visualizedHpPokemon.id = "hp-pokemon";
+            visualizedCpPokemon.id = "cp-pokemon";
+        
+            visualizedNamePokemon.textContent = pokemon.name;
+            visualizedPicturePokemon.src = pokemon.picture;
+            visualizedTypePokemon.innerHTML = `Types: ${pokemon.types.join(", ")}`;
+            visualizedHpPokemon.textContent = `HP: ${pokemon.hp}`;
+            visualizedCpPokemon.textContent = `CP: ${pokemon.cp}`;
+        
+            visualizedPokemonBlock.appendChild(visualizedNamePokemon);
+            visualizedPokemonBlock.appendChild(visualizedPicturePokemon);
+            visualizedPokemonBlock.appendChild(visualizedTypePokemon);
+            visualizedPokemonBlock.appendChild(visualizedHpPokemon);
+            visualizedPokemonBlock.appendChild(visualizedCpPokemon);
+        
+            editContainer.insertBefore(visualizedPokemonBlock, editForm);
+          }
+            const visualizedPokemonBlock = document.createElement("div");
+
+          visualizeButton.addEventListener('click', () => {
+            const updatedPokemon = {
+              ...pokemon,
+              picture: pictureInput.value,
+              name: nameInput.value,
+              types: typesInput.value.split(","),
+              hp: parseInt(hpInput.value),
+              cp: parseInt(cpInput.value),
+            };
+            visualizedPokemonBlock.innerHTML="";
+            displayVisualizedPokemon(updatedPokemon);
+          })
 
 
           // Gérer l'événement de clic sur le bouton Enregistrer
@@ -246,8 +306,8 @@ function displayPokemon() {
                 pokemon.cp = updatedPokemon.cp;
 
                 pokedexContainer.innerHTML = "";
-                displayPokemon();
-                alert(`Le Pokémon ${pokemon.name} a été modifié avec succès.`);
+               
+                // alert(`Le Pokémon ${pokemon.name} a été modifié avec succès.`);
               })
               .catch((error) => {
                 console.error("Une erreur s'est produite :", error);
@@ -257,7 +317,6 @@ function displayPokemon() {
           // Gérer l'événement de clic sur le bouton Annuler
           cancelButton.addEventListener("click", () => {
             pokedexContainer.innerHTML = "";
-            displayPokemon();
           });
         }
 
@@ -270,14 +329,14 @@ function displayPokemon() {
       console.error("Une erreur s'est produite :", error);
     });
 }
-
+  
 const pokedexContainer = document.querySelector("#pokedex-container");
 const pokedex = document.querySelector("#pokedex");
 
 pokedex.addEventListener("click", () => {
-  event.preventDefault();
   pokedexContainer.innerHTML = "";
-
+  searchBlock.innerHTML ="";
   displayPokemon();
   addPokemonContainer.innerHTML = "";
 });
+

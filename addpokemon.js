@@ -1,6 +1,6 @@
 function addPokemon() {
   const addPokemonContainer = document.querySelector("#add-pokemon-container");
-  const pokedexContainer = document.querySelector("#pokedex-container"); 
+  const pokedexContainer = document.querySelector("#pokedex-container");
 
   const titleAddContainer = document.createElement("h2");
   const formAddContainer = document.createElement("form");
@@ -15,6 +15,7 @@ function addPokemon() {
   const labelAddContainerCp = document.createElement("label");
   const inputAddContainerCp = document.createElement("input");
   const buttonAdd = document.createElement("button");
+  const buttonVisualised = document.createElement("button");
 
   titleAddContainer.classList.add("name-pokemon");
   formAddContainer.classList.add("pokemon-block");
@@ -29,6 +30,7 @@ function addPokemon() {
   labelAddContainerCp.classList.add("label-pokemon");
   inputAddContainerCp.classList.add("input-pokemon");
   buttonAdd.classList.add("put-button");
+  buttonVisualised.classList.add("visualised-button");
 
   titleAddContainer.id = "title-add-pokemon";
   formAddContainer.action = "/api/pokemons";
@@ -61,25 +63,28 @@ function addPokemon() {
   inputAddContainerCp.name = "cp";
   inputAddContainerCp.required = true;
   buttonAdd.type = "submit";
+  buttonVisualised.type ="submit";
 
   titleAddContainer.textContent = "Crée ou ajoute un pokémon";
-  labelAddContainerName.textContent = "nom";
-  labelAddContainerImg.textContent = "url de l'image";
-  labelAddContainerType.textContent = "type";
-  labelAddContainerHp.textContent = "hp";
-  labelAddContainerCp.textContent = "cp";
+  labelAddContainerName.textContent = "Nom";
+  labelAddContainerImg.textContent = "URL de l'image";
+  labelAddContainerType.textContent = "Type";
+  labelAddContainerHp.textContent = "Hp";
+  labelAddContainerCp.textContent = "Cp";
+  buttonVisualised.textContent = "Visualiser";
   buttonAdd.textContent = "Ajouter";
 
   formAddContainer.addEventListener("submit", (event) => {
     event.preventDefault();
-
     const newPokemon = {
-        name: inputAddContainerNameText.value,
-        types: inputAddContainerTypeText.value.split(","),
-        picture: inputAddContainerImg.value,
-        hp: inputAddContainerHp.value,
-        cp: inputAddContainerCp.value,
+      name: inputAddContainerNameText.value,
+      types: inputAddContainerTypeText.value.split(","),
+      picture: inputAddContainerImg.value,
+      hp: inputAddContainerHp.value,
+      cp: inputAddContainerCp.value,
     };
+
+    
 
     fetch(`http://localhost:3000/api/pokemons`, {
       method: "POST",
@@ -144,14 +149,18 @@ function addPokemon() {
   formAddContainer.appendChild(labelAddContainerCp);
   formAddContainer.appendChild(inputAddContainerCp);
   formAddContainer.appendChild(buttonAdd);
-}
+
+
+
+  }
+
 
 const addPokemonContainer = document.querySelector("#add-pokemon-container");
 const addPokemeon = document.querySelector("#add-pokemon");
+
 addPokemeon.addEventListener("click", () => {
   addPokemonContainer.innerHTML = "";
   addPokemon();
+  searchBlock.innerHTML ="";
   pokedexContainer.innerHTML = "";
 });
-
-
