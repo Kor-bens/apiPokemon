@@ -204,17 +204,6 @@ const pokemons = [
     "types": [
       "feu"
     ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
-    "hp": "5",
-    "cp": "2",
-    "id": 28,
-    "created": "2023-06-19T12:48:50.339Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "feu"
-    ],
     "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
     "hp": "5",
     "cp": "2",
@@ -319,6 +308,17 @@ const pokemons = [
     "cp": "5",
     "id": 42,
     "created": "2023-06-20T06:57:09.861Z"
+  },
+  {
+    "name": "ezfefz",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
+    "hp": 5,
+    "cp": 5,
+    "id": 43,
+    "created": "2023-06-20T12:41:24.671Z"
   }
 ];
 
