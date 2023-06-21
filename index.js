@@ -8,16 +8,11 @@
   const error = document.createElement("p");
           error.id="error";
   
-  
-  
-  
-  
   const searchBlock = document.querySelector("#search-block");
 
-// Fonction pour afficher les Pokémon
 
+// Fonction pour afficher les Pokémon
 function displayPokemon() {
-  // history.pushState(null, "", "/pokemons");
 
   // Réinitialiser le contenu du conteneur de la pokédex
   pokedexContainer.innerHTML = "";
@@ -42,7 +37,6 @@ function displayPokemon() {
       searchBlock.appendChild(buttonSearchButton);
 
       
-  //CHERCHER UN POKEMON
    //CHERCHER UN POKEMON
    buttonSearchButton.addEventListener("click", () => {
     const pokemonName = inputSearchBar.value; // Utiliser value au lieu de name
@@ -202,6 +196,7 @@ function displayPokemon() {
           pictureLabel.textContent = "URL de l'image:";
           const pictureInput = document.createElement("input");
           pictureInput.type = "text";
+          pictureInput.value= pokemon.picture;
           pictureInput.src = pokemon.picture;
           pictureInput.required = true;
           editForm.appendChild(pictureLabel);
@@ -234,15 +229,18 @@ function displayPokemon() {
           editForm.appendChild(cpLabel);
           editForm.appendChild(cpInput);
 
-          const visualizeButton  =document.createElement("button");
+          const visualizeButton =document.createElement("button");
+          visualizeButton.id="visualize-button";
           visualizeButton.textContent = "Visualiser";
           editForm.appendChild(visualizeButton);
 
           const saveButton = document.createElement("button");
+          saveButton.id="save-button";
           saveButton.textContent = "Enregistrer";
           editForm.appendChild(saveButton);
 
           const cancelButton = document.createElement("button");
+          cancelButton.id ="cancel-button";
           cancelButton.textContent = "Annuler";
           editForm.appendChild(cancelButton);
 
@@ -283,9 +281,8 @@ function displayPokemon() {
           editContainer.appendChild(editForm);
 
 
-          function displayVisualizedPokemon(pokemon) {
 
-           
+          function displayVisualizedPokemon(pokemon) {
             const existingVisualizedBlock = editContainer.querySelector("#visualized-pokemon-block");
            if (existingVisualizedBlock) {
             existingVisualizedBlock.remove(); 
@@ -377,6 +374,8 @@ function displayPokemon() {
 
           // Gérer l'événement de clic sur le bouton Enregistrer
           saveButton.addEventListener("click", () => {
+
+          
             // Récupérer les valeurs modifiées du formulaire
             const updatedPokemon = {
               ...pokemon,

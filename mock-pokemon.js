@@ -45,18 +45,6 @@ const pokemons = [
     "created": "2023-06-16T17:02:11.274Z"
   },
   {
-    "id": 7,
-    "name": "Piafabec",
-    "hp": 14,
-    "cp": 5,
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/021.png",
-    "types": [
-      "Normal",
-      "Vol"
-    ],
-    "created": "2023-06-16T17:02:11.274Z"
-  },
-  {
     "id": 8,
     "name": "Abo",
     "hp": 16,
@@ -330,6 +318,17 @@ const pokemons = [
     "cp": "5",
     "id": 52,
     "created": "2023-06-21T08:13:11.050Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "psy"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
+    "hp": "5",
+    "cp": "2",
+    "id": 53,
+    "created": "2023-06-21T11:14:15.651Z"
   }
 ];
 

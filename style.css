@@ -18,7 +18,7 @@ src: local("font-family/Pokemon_Hollow.ttf") format('ttf');
     font-size: 2em;
     font-family: "pokemon-hollow", "pokemon-solid";
     color: yellow;
-    -webkit-text-stroke: 3px #0d4c99;
+    -webkit-text-stroke: 2px #0d4c99;
     margin-top: -8vh;
 }
 
@@ -125,7 +125,7 @@ a{
     justify-content: center;
     height: 4vh;
     margin-top: 4vh;
-    margin-right: 3vw;
+    margin-right: 2vw;
 }
 
 #label-search-pokemon{
@@ -133,7 +133,7 @@ a{
     font-family: "pokemon-hollow";
     font-size: 2em;
     color: yellow;
-    -webkit-text-stroke: 3.5px #0d4c99;
+    -webkit-text-stroke: 2px #0d4c99;
     margin-top: -3.8vh;
     margin-right: 1vw;
 }
@@ -202,6 +202,8 @@ margin-top: 2vh;
     color: rgb(245, 232, 232);
 
 }
+
+
 
 .type-pokemon{
     font-weight: 300;
@@ -288,7 +290,7 @@ background-color: #0d4c99;
 }
 #edit-container{
     display: flex;
-    
+    margin-top: -8vh;
 }
 
 #edit-form{
@@ -298,6 +300,59 @@ background-color: #0d4c99;
     line-height: 2;
     margin-top: 2vh;
 
+}
+
+#visualize-button{
+    margin-top: 1vh;
+    background-color: yellow;
+    border: 2px solid blue;
+    color: blue;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#visualize-button:hover{
+    cursor: pointer;
+    background-color: red;
+color: black;
+border: 1px solid white;
+}
+
+
+
+#save-button{
+    margin-top: 0.5vh;
+    border: 2px solid blue;
+    font-size: 18px;
+
+    background-color: yellow;
+    color: blue;
+    border-radius: 5px;
+}
+
+#save-button:hover{
+    cursor: pointer;
+    background-color: red;
+color: black;
+border: 1px solid white;
+}
+
+
+#cancel-button{
+    margin-top: 0.5vh;
+    border: 2px solid blue;
+    font-size: 18px;
+
+    background-color: yellow;
+    color: blue;
+    border-radius: 5px;
+}
+
+#cancel-button:hover{
+    cursor: pointer;
+    background-color: red;
+color: black;
+border: 1px solid white;
 }
 
 #selected-pokemon-container{
@@ -321,7 +376,7 @@ background-color: #0d4c99;
     color: white;
  }
  .hp, .cp, .type{
-    color: white;
+    color: rgb(255, 255, 255);
  }
 
  #pokemon-detail-container{
