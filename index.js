@@ -1,4 +1,10 @@
-  const descriptionPage = document.querySelector
+  const descriptionPage = document.querySelector('#description');
+  const textDescription = document.createElement("p");
+  textDescription.id = "text-description";
+  textDescription.textContent ="Bienvenue dans ton pokédex, ajoute des pokemons... Attrapez les tous !";
+ 
+  descriptionPage.appendChild(textDescription);
+
   const error = document.createElement("p");
           error.id="error";
   
@@ -451,6 +457,7 @@ pokedex.addEventListener("click", () => {
   pokedexContainer.innerHTML = "";
   searchBlock.innerHTML ="";
   error.innerHTML="";
+  descriptionPage.innerHTML="";
   displayPokemon();
   addPokemonContainer.innerHTML = "";
 });

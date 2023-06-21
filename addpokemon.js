@@ -213,6 +213,7 @@ const addPokemeon = document.querySelector("#add-pokemon");
 
 addPokemeon.addEventListener("click", () => {
   addPokemonContainer.innerHTML = "";
+  descriptionPage.innerHTML ="";
   addPokemon();
   searchBlock.innerHTML ="";
   pokedexContainer.innerHTML = "";
