@@ -16,6 +16,7 @@ function addPokemon() {
   const inputAddContainerCp = document.createElement("input");
   const buttonAdd = document.createElement("button");
   const buttonVisualised = document.createElement("button");
+  const errorMessage = document.createElement("p");
 
   titleAddContainer.classList.add("name-pokemon");
   formAddContainer.classList.add("pokemon-block");
@@ -31,6 +32,7 @@ function addPokemon() {
   inputAddContainerCp.classList.add("input-pokemon");
   buttonAdd.classList.add("put-button");
   buttonVisualised.classList.add("visualised-button");
+  errorMessage.id='error-message';
 
   titleAddContainer.id = "title-add-pokemon";
   formAddContainer.action = "/api/pokemons";
@@ -76,6 +78,40 @@ function addPokemon() {
 
   formAddContainer.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const name = inputAddContainerNameText.value;
+  const types = inputAddContainerTypeText.value.split(",");
+  const picture = inputAddContainerImg.value;
+  const hp = parseInt(inputAddContainerHp.value);
+  const cp = parseInt(inputAddContainerCp.value);
+
+  if (!name || types.length === 0 || !picture || isNaN(hp) || isNaN(cp)) {
+    errorMessage.textContent = "Veuillez remplir tous les champs avec des valeurs valides.";
+    return;
+  }
+    
+  const validTypes = ["feu", "insecte", "eau","acier", "dragon", "combat", "électrik", "fée", "glace", "insecte", "normal", "plante", "poison", "psy", "roche", "sol", "spectre", "ténèbre", "vol"];
+  const isTypeValid = types.every((type) => validTypes.includes(type.trim().toLowerCase()));
+  const isImageUrlValid = validateImageUrl(picture);
+  
+
+  if (!isTypeValid) {
+    errorMessage.textContent = "Le type du pokémon doit étre: feu, eau, insecte...";
+    return;
+  }
+
+  if (!isImageUrlValid) {
+    errorMessage.textContent = "L'image doit étre une url.";
+    return;
+  }
+
+  if (!Number.isInteger(hp)) {
+    errorMessage.textContent = "Les points de vie du pokémon doit etre un nombre.";
+  }
+  if (!Number.isInteger(cp)) {
+    errorMessage.textContent = "Les points de combat du pokémon doit étre un nombre.";
+  }
+
     const newPokemon = {
       name: inputAddContainerNameText.value,
       types: inputAddContainerTypeText.value.split(","),
@@ -84,6 +120,7 @@ function addPokemon() {
       cp: inputAddContainerCp.value,
     };
 
+    
     
 
     fetch(`http://localhost:3000/api/pokemons`, {
@@ -102,6 +139,8 @@ function addPokemon() {
       .then((data) => {
         // Traitez la réponse du serveur ici si nécessaire
         console.log(data);
+
+
 
         // Affichez les détails du nouveau pokémon
         const newPokemonDetails = document.createElement("div");
@@ -133,6 +172,7 @@ function addPokemon() {
       })
       .catch((error) => {
         console.error("Une erreur s'est produite :", error);
+        errorMessage.textContent = "An error occurred while adding the Pokemon.";
       });
   });
 
@@ -149,9 +189,22 @@ function addPokemon() {
   formAddContainer.appendChild(labelAddContainerCp);
   formAddContainer.appendChild(inputAddContainerCp);
   formAddContainer.appendChild(buttonAdd);
+  addPokemonContainer.appendChild(errorMessage);
 
 
+  }
 
+  function validateImageUrl(url) {
+    // Simple URL validation logic
+    
+   
+  // You can enhance it as per your requirements
+    
+   
+  const urlRegex = /^(http|https):\/\/.*\.(jpeg|jpg|gif|png)$/i;
+    
+   
+  return urlRegex.test(url);
   }
 
 

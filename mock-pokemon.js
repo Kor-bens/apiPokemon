@@ -45,17 +45,6 @@ const pokemons = [
     "created": "2023-06-16T17:02:11.274Z"
   },
   {
-    "id": 6,
-    "name": "Rattata",
-    "hp": 18,
-    "cp": 6,
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
-    "types": [
-      "Normal"
-    ],
-    "created": "2023-06-16T17:02:11.274Z"
-  },
-  {
     "id": 7,
     "name": "Piafabec",
     "hp": 14,
@@ -310,26 +299,37 @@ const pokemons = [
     "created": "2023-06-20T06:57:09.861Z"
   },
   {
-    "name": "ezfefz",
+    "name": "Tortosa",
+    "types": [
+      "eau"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
+    "hp": "5",
+    "cp": "5",
+    "id": 50,
+    "created": "2023-06-21T07:41:10.146Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "EAU"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
+    "hp": 5,
+    "cp": 5,
+    "id": 51,
+    "created": "2023-06-21T07:54:36.431Z"
+  },
+  {
+    "name": "dazda",
     "types": [
       "feu"
     ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
-    "hp": 5,
-    "cp": 5,
-    "id": 43,
-    "created": "2023-06-20T12:41:24.671Z"
-  },
-  {
-    "name": "walid",
-    "types": [
-      "radin"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png",
-    "hp": 0,
-    "cp": 0,
-    "id": 44,
-    "created": "2023-06-20T17:29:06.758Z"
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
+    "hp": "5",
+    "cp": "5",
+    "id": 52,
+    "created": "2023-06-21T08:13:11.050Z"
   }
 ];
 

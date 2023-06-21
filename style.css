@@ -274,7 +274,7 @@ background-color: #0d4c99;
 }
 #edit-container{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: ;
 }
 
 #edit-form{
@@ -295,7 +295,33 @@ background-color: #0d4c99;
     text-align: center;
 }
 
+#error{
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "pokemon-hollow";
+    color: yellow;
+    -webkit-text-stroke: 1.5px #0d4c99;
+ }
 
+ .name{
+    color: white;
+ }
+ .hp, .cp, .type{
+    color: white;
+ }
+
+ #pokemon-detail-container{
+    text-align: center;
+ }
+
+ #error-message{
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "pokemon-hollow";
+    color: yellow;
+    -webkit-text-stroke: 1.5px #0d4c99; 
+}
+ 
 
 
 @media only screen and (min-width: 768px ) and (max-width: 1068px) {
@@ -368,17 +394,6 @@ background-color: #0d4c99;
    #pokedex-container{
     margin-top: 5vh;
    }
- }
-
- #error{
-    color: red;
- }
-
- .name{
-    color: white;
- }
- .hp, .cp, .type{
-    color: white;
  }
 
  

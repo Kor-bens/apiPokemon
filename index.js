@@ -1,5 +1,6 @@
   const descriptionPage = document.querySelector
-  
+  const error = document.createElement("p");
+          error.id="error";
   
   
   
@@ -55,6 +56,7 @@ function displayPokemon() {
         const pokemon = data.data;
         if (pokemon) {
           const pokemonDetailsContainer = document.createElement("div");
+          pokemonDetailsContainer.id="pokemon-detail-container"
           pokemonDetailsContainer.innerHTML = `
             <h2 class="name">${pokemon.name}</h2>
             <img src="${pokemon.picture}" alt="${pokemon.name}">
@@ -63,8 +65,8 @@ function displayPokemon() {
             <p class="cp">cp: ${pokemon.cp}</p>`;
           pokedexContainer.appendChild(pokemonDetailsContainer);
         } else {
-          const error = document.createElement("p");
-          error.id="error";
+          // const error = document.createElement("p");
+          // error.id="error";
           error.textContent = "Aucun Pokémon trouvé avec ce nom.";
           console.log("Aucun Pokémon trouvé avec ce nom.");
           document.body.appendChild(error);
@@ -75,59 +77,6 @@ function displayPokemon() {
       });
   });
 
-  inputSearchBar.addEventListener("input", () => {
-    const pokemonName = inputSearchBar.value;
-    searchPokemons(pokemonName);
-  });
-
-//   function searchPokemons(pokemonName) {
-//   // Réinitialiser le contenu du conteneur de la pokédex
-//   pokedexContainer.innerHTML = "";
-
-//   // Effectuer une requête GET pour obtenir la liste des Pokémon correspondant au nom
-//   fetch(`http://localhost:3000/api/pokemons?name=${pokemonName}`)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error("Erreur HTTP " + response.status);
-//       }
-//       return response.json();
-//     })
-//     .then((dataPokemons) => {
-//       const filteredPokemons = dataPokemons.data;
-//       if (filteredPokemons.length > 0) {
-//         filteredPokemons.forEach((pokemon) => {
-//           // Créer les éléments HTML pour afficher chaque Pokémon
-
-//           // Créer un élément <div> pour le Pokémon
-//           const pokemonDiv = document.createElement("div");
-//           pokemonDiv.classList.add("pokemon");
-
-//           // Créer un élément <img> pour l'image du Pokémon
-//           const imageElement = document.createElement("img");
-//           imageElement.src = pokemon.imageUrl;
-//           imageElement.alt = pokemon.name;
-
-//           // Créer un élément <h2> pour le nom du Pokémon
-//           const nameElement = document.createElement("h2");
-//           nameElement.textContent = pokemon.name;
-
-//           // Ajouter l'image et le nom du Pokémon à l'élément <div> du Pokémon
-//           pokemonDiv.appendChild(imageElement);
-//           pokemonDiv.appendChild(nameElement);
-
-//           // Ajouter l'élément <div> du Pokémon au conteneur de la Pokédex
-//           pokedexContainer.appendChild(pokemonDiv);
-//         });
-//       } else {
-//         console.log("Aucun Pokémon trouvé avec ce nom.");
-//       }
-//     })
-//     .catch((error) => {
-//       console.error("Une erreur s'est produite :", error);
-//     });
-// }
-  
-  // Effectuer une requête GET pour obtenir la liste des Pokémon
   fetch("http://localhost:3000/api/pokemons")
     .then((response) => {
       if (!response.ok) {
@@ -204,9 +153,11 @@ function displayPokemon() {
               return response.json();
             })
             .then((data) => {
+              const messageDelete = document.createElement("p")
+              messageDelete.id = "message-delete";
               // Traiter la réponse JSON après la suppression du pokemon
               pokemonBlock.remove(); // Supprimer l'élément de la page côté client
-              alert(`Le pokémon ${pokemon.name} a bien été supprimé.`);
+              messageDelete.textContent = `Le pokémon ${pokemon.name} a bien été supprimé.`;
               // Autres actions à effectuer après la suppression du pokemon
             })
             .catch((error) => {
@@ -230,9 +181,8 @@ function displayPokemon() {
 
 
           const editForm = document.createElement("form");
-          editForm.id = "edit-form";
-          editContainer.appendChild(editForm);
-
+          editForm.id = "edit-form";    
+               
           const nameLabel = document.createElement("label");
           nameLabel.textContent = "Nom:";
           const nameInput = document.createElement("input");
@@ -315,20 +265,27 @@ function displayPokemon() {
           selectedHpPokemon.textContent = `HP: ${pokemon.hp}`;
           selectedCpPokemon.textContent = `CP: ${pokemon.cp}`;
 
+         
+
           selectedPokemonContainer.appendChild(selectedNamePokemon);
           selectedPokemonContainer.appendChild(selectedPicturePokemon);
           selectedPokemonContainer.appendChild(selectedTypePokemon);
           selectedPokemonContainer.appendChild(selectedHpPokemon);
           selectedPokemonContainer.appendChild(selectedCpPokemon);
-          editContainer.appendChild(selectedPokemonContainer);
+           editContainer.appendChild( selectedPokemonContainer);
+
+          editContainer.appendChild(editForm);
+
 
           function displayVisualizedPokemon(pokemon) {
 
            
             const existingVisualizedBlock = editContainer.querySelector("#visualized-pokemon-block");
-  if (existingVisualizedBlock) {
-    existingVisualizedBlock.remove(); 
-  }
+           if (existingVisualizedBlock) {
+            existingVisualizedBlock.remove(); 
+            }
+
+            
             const visualizedPokemonBlock = document.createElement("div");
             visualizedPokemonBlock.id = "visualized-pokemon-block";
         
@@ -356,11 +313,46 @@ function displayPokemon() {
             visualizedPokemonBlock.appendChild(visualizedHpPokemon);
             visualizedPokemonBlock.appendChild(visualizedCpPokemon);
         
-            editContainer.insertBefore(visualizedPokemonBlock, editForm);
+            editContainer.appendChild(visualizedPokemonBlock);
+            
           }
             const visualizedPokemonBlock = document.createElement("div");
 
           visualizeButton.addEventListener('click', () => {
+
+            const name = nameInput.value;
+            const types = typesInput.value.split(",");
+            const picture = pictureInput.value;
+            const hp = parseInt(hpInput.value);
+            const cp = parseInt(cpInput.value);
+          
+            if (!name || types.length === 0 || !picture || isNaN(hp) || isNaN(cp)) {
+              errorMessage.textContent = "Veuillez remplir tous les champs avec des valeurs valides.";
+              return;
+            }
+              
+            const validTypes = ["feu", "insecte", "eau","acier", "dragon", "combat", "électrik", "fée", "glace", "insecte", "normal", "plante", "poison", "psy", "roche", "sol", "spectre", "ténèbre", "vol"];
+            const isTypeValid = types.every((type) => validTypes.includes(type.trim().toLowerCase()));
+            const isImageUrlValid = validateImageUrl(picture);
+          
+          
+            if (!isTypeValid) {
+              errorMessage.textContent = "Le type du pokémon doit étre: feu, eau, insecte...";
+              return;
+            }
+          
+            if (!isImageUrlValid) {
+              errorMessage.textContent = "Saisissez une url pour l'image du pokémon.";
+              return;
+            }
+          
+            if (!Number.isInteger(hp)) {
+              errorMessage.textContent = "Les points de vie du pokémon doit etre un nombre.";
+            }
+            if (!Number.isInteger(cp)) {
+              errorMessage.textContent = "Les points de combat du pokémon doit étre un nombre.";
+            }
+            
             const updatedPokemon = {
               ...pokemon,
               picture: pictureInput.value,
@@ -373,6 +365,9 @@ function displayPokemon() {
             displayVisualizedPokemon(updatedPokemon);
           })
 
+          const errorMessage = document.createElement("p");
+          errorMessage.id="error-message";
+        pokedexContainer.appendChild(errorMessage);
 
           // Gérer l'événement de clic sur le bouton Enregistrer
           saveButton.addEventListener("click", () => {
@@ -432,14 +427,30 @@ function displayPokemon() {
     .catch((error) => {
       console.error("Une erreur s'est produite :", error);
     });
+
+   
+          
+}
+
+function validateImageUrl(url) {
+  // Simple URL validation logic
+  
+ 
+// You can enhance it as per your requirements
+  
+ 
+const urlRegex = /^(http|https):\/\/.*\.(jpeg|jpg|gif|png)$/i;
+  
+ 
+return urlRegex.test(url);
 }
   
 const pokedexContainer = document.querySelector("#pokedex-container");
 const pokedex = document.querySelector("#pokedex");
-
 pokedex.addEventListener("click", () => {
   pokedexContainer.innerHTML = "";
   searchBlock.innerHTML ="";
+  error.innerHTML="";
   displayPokemon();
   addPokemonContainer.innerHTML = "";
 });
