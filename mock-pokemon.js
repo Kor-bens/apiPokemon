@@ -122,17 +122,6 @@ const pokemons = [
     "created": "2023-06-19T07:25:32.961Z"
   },
   {
-    "name": "olivia",
-    "types": [
-      "antillais"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/521.png",
-    "hp": 100,
-    "cp": 100,
-    "id": 23,
-    "created": "2023-06-19T08:36:37.684Z"
-  },
-  {
     "name": "Tortosa",
     "types": [
       "feu"
@@ -177,13 +166,13 @@ const pokemons = [
     "created": "2023-06-19T12:48:36.630Z"
   },
   {
-    "name": "Tortosa",
+    "name": "ratus",
     "types": [
-      "feu"
+      "eau"
     ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
-    "hp": "5",
-    "cp": "2",
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/012.png",
+    "hp": 5,
+    "cp": 28,
     "id": 29,
     "created": "2023-06-19T12:52:08.819Z"
   },
@@ -263,72 +252,6 @@ const pokemons = [
     "cp": "5",
     "id": 38,
     "created": "2023-06-20T06:46:12.619Z"
-  },
-  {
-    "name": "zefezfez",
-    "types": [
-      "zefezf"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
-    "hp": "ff",
-    "cp": "fff",
-    "id": 41,
-    "created": "2023-06-20T06:56:11.989Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "aze"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
-    "hp": "5",
-    "cp": "5",
-    "id": 42,
-    "created": "2023-06-20T06:57:09.861Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "eau"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
-    "hp": "5",
-    "cp": "5",
-    "id": 50,
-    "created": "2023-06-21T07:41:10.146Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "EAU"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
-    "hp": 5,
-    "cp": 5,
-    "id": 51,
-    "created": "2023-06-21T07:54:36.431Z"
-  },
-  {
-    "name": "dazda",
-    "types": [
-      "feu"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
-    "hp": "5",
-    "cp": "5",
-    "id": 52,
-    "created": "2023-06-21T08:13:11.050Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "psy"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
-    "hp": "5",
-    "cp": "2",
-    "id": 53,
-    "created": "2023-06-21T11:14:15.651Z"
   }
 ];
 

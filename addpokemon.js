@@ -2,7 +2,8 @@ function addPokemon() {
   const addPokemonContainer = document.querySelector("#add-pokemon-container");
   const pokedexContainer = document.querySelector("#pokedex-container");
 
-  const titleAddContainer = document.createElement("h2");
+  pokedex.style.backgroundColor = 
+   titleAddContainer = document.createElement("h2");
   const formAddContainer = document.createElement("form");
   const labelAddContainerName = document.createElement("label");
   const inputAddContainerNameText = document.createElement("input");
@@ -123,7 +124,7 @@ function addPokemon() {
     
     
 
-    fetch(`http://localhost:3000/api/pokemons`, {
+    fetch(`http://localhost:5000/api/pokemons`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

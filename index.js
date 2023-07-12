@@ -43,7 +43,7 @@ function displayPokemon() {
 
     pokedexContainer.innerHTML = "";
 
-    fetch(`http://localhost:3000/api/pokemons/${pokemonName}`, {
+    fetch(`http://localhost:5000/api/pokemons/${pokemonName}`, {
       method: "GET",
     })
       .then((response) => {
@@ -77,7 +77,7 @@ function displayPokemon() {
       });
   });
 
-  fetch("http://localhost:3000/api/pokemons")
+  fetch("http://localhost:5000/api/pokemons")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Erreur HTTP " + response.status);
@@ -142,7 +142,7 @@ function displayPokemon() {
           const pokemonId = pokemon.id;
 
           // Effectuer une requête DELETE à l'API pour supprimer le pokemon
-          fetch(`http://localhost:3000/api/pokemons/${pokemonId}`, {
+          fetch(`http://localhost:5000/api/pokemons/${pokemonId}`, {
             method: "DELETE",
           })
             .then((response) => {
@@ -389,7 +389,7 @@ function displayPokemon() {
              // Mettre à jour les éléments HTML correspondants
            
             // Effectuer une requête PUT à l'API pour mettre à jour le Pokémon
-            fetch(`http://localhost:3000/api/pokemons/${pokemon.id}`, {
+            fetch(`http://localhost:5000/api/pokemons/${pokemon.id}`, {
               method: "PUT",
               headers: {
                 "Content-Type": "application/json",
@@ -460,4 +460,27 @@ pokedex.addEventListener("click", () => {
   displayPokemon();
   addPokemonContainer.innerHTML = "";
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
