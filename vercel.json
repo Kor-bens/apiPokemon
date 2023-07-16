@@ -2,11 +2,11 @@
     "version": 2,
     "name": "node-pokemon-api",
     "builds": [{
-      "src": "app.js",
+      "src": "index.html",
       "use": "@vercel/node"
     }],
     "routes": [{
       "src": "/(.*)",
-      "dest": "app.js"
+      "dest": "index.html"
     }]
   }
