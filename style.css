@@ -157,7 +157,7 @@ a{
     height: 4vh;
     border-radius: 5vw;
     font-family: "pokemon-hollow";
-
+    font-size: 30px;
 }
 
 #search-bar[type="text"]{

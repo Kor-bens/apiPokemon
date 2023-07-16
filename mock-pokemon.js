@@ -252,6 +252,28 @@ const pokemons = [
     "cp": "5",
     "id": 38,
     "created": "2023-06-20T06:46:12.619Z"
+  },
+  {
+    "name": "Tortosa",
+    "types": [
+      "feu"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
+    "hp": "4",
+    "cp": "1",
+    "id": 39,
+    "created": "2023-07-14T22:39:39.979Z"
+  },
+  {
+    "name": "olivier",
+    "types": [
+      "eau"
+    ],
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
+    "hp": "4",
+    "cp": "2",
+    "id": 40,
+    "created": "2023-07-14T22:43:26.091Z"
   }
 ];
 
