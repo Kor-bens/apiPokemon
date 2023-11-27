@@ -45,17 +45,6 @@ const pokemons = [
     "created": "2023-06-16T17:02:11.274Z"
   },
   {
-    "id": 8,
-    "name": "mimi",
-    "hp": 16,
-    "cp": 4,
-    "picture": "https://www.jim.fr/e-docs/00/02/37/12/carac_photo_1.jpg",
-    "types": [
-      "Poison"
-    ],
-    "created": "2023-06-16T17:02:11.274Z"
-  },
-  {
     "id": 9,
     "name": "Pikachu",
     "hp": 21,
@@ -111,61 +100,6 @@ const pokemons = [
     "created": "2023-06-16T17:51:21.642Z"
   },
   {
-    "name": "egregergerger",
-    "types": [
-      "aefefzegzegzeg"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png",
-    "hp": 5,
-    "cp": 555,
-    "id": 21,
-    "created": "2023-06-19T07:25:32.961Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "feu"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/521.png",
-    "hp": "5",
-    "cp": "8",
-    "id": 24,
-    "created": "2023-06-19T12:40:29.061Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "feu"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
-    "hp": "5",
-    "cp": "5",
-    "id": 25,
-    "created": "2023-06-19T12:40:41.620Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "feu"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/073.png",
-    "hp": "5",
-    "cp": "2",
-    "id": 26,
-    "created": "2023-06-19T12:43:23.135Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "feu"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
-    "hp": "5",
-    "cp": "8",
-    "id": 27,
-    "created": "2023-06-19T12:48:36.630Z"
-  },
-  {
     "name": "ratus",
     "types": [
       "eau"
@@ -204,65 +138,10 @@ const pokemons = [
       "feu"
     ],
     "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
-    "hp": "8",
-    "cp": "8",
-    "id": 34,
-    "created": "2023-06-19T14:35:12.913Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "feu"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
     "hp": "7",
     "cp": "2",
     "id": 35,
     "created": "2023-06-19T14:35:28.692Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "feu"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
-    "hp": "5",
-    "cp": "9",
-    "id": 36,
-    "created": "2023-06-19T14:44:12.014Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "feu"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
-    "hp": "r",
-    "cp": "e",
-    "id": 37,
-    "created": "2023-06-19T14:46:15.997Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "eau"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
-    "hp": "8",
-    "cp": "5",
-    "id": 38,
-    "created": "2023-06-20T06:46:12.619Z"
-  },
-  {
-    "name": "Tortosa",
-    "types": [
-      "feu"
-    ],
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/251.png",
-    "hp": "4",
-    "cp": "1",
-    "id": 39,
-    "created": "2023-07-14T22:39:39.979Z"
   },
   {
     "name": "olivier",
