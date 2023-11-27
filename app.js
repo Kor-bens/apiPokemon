@@ -9,7 +9,7 @@ let pokemons = require("./mock-pokemon");
 const fs = require("fs");
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // const sequelize = new Sequelize(
 //   'pokedex',
