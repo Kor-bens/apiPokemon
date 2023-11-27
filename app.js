@@ -35,7 +35,7 @@ app
   .use(morgan("dev"))
   .use(bodyParser.json())
 
-app.get("/", (req, res) => res.send("hello, express 3!"));
+app.get("/", (req, res) => res.send("hello, express 38!"));
 
 app.get("/api/pokemons", (req, res) => {
   const message = "La liste des pokémons a bien été récupérée !";

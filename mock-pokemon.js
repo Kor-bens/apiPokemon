@@ -46,10 +46,10 @@ const pokemons = [
   },
   {
     "id": 8,
-    "name": "Abo",
+    "name": "mimi",
     "hp": 16,
     "cp": 4,
-    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/023.png",
+    "picture": "https://www.jim.fr/e-docs/00/02/37/12/carac_photo_1.jpg",
     "types": [
       "Poison"
     ],
