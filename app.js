@@ -12,23 +12,6 @@ const morgan = require('morgan');
 const app = express();
 const port = process.env.PORT || 5000;
 
-// const sequelize = new Sequelize(
-//   'pokedex',
-//   'root',
-//   "",
-//   {
-//     host: 'localhost',
-//     dialect: 'mariadb',
-//     dialectOptions: {
-//       timezone: 'Etc/GMT-2'
-//     },
-//     logging: false
-//   }
-// )
-
-// sequelize.authenticate()
-//    .then(_ => console.log('La connexion à la base de données a bien été établie'))
-//    .catch(error => console.log(`Impossible de se connecter à la base de données ${error}`))
 
 app
   .use(cors())

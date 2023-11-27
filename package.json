@@ -6,6 +6,7 @@
   "scripts": {
     "start": "morgan app.js"
   },
+  
   "author": "Korbens",
   "license": "ISC",
   "dependencies": {
@@ -22,3 +23,4 @@
     "nodemon": "^2.0.22"
   }
 }
+
