@@ -14,10 +14,11 @@ const port = process.env.PORT || 5000;
 
 
 app
-  .use(cors())
-  .use(favicon(__dirname + "/favicon.ico"))
-  .use(morgan("dev"))
-  .use(bodyParser.json())
+.use(morgan("dev")) // Use "dev" format for logging
+.use(express.json())
+.use(express.urlencoded({ extended: true }))
+.use(express.static("public")) // Assuming you have a public folder for static files
+.use(favicon(__dirname + "/favicon.ico"));
 
 app.get("/", (req, res) => res.send("hello, express 38!"));
 
