@@ -4,7 +4,7 @@
   "description": "une api pour gerer des pokemons",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "morgan app.js"
   },
   "author": "Korbens",
   "license": "ISC",
