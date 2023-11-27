@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const { success, getUniqueId } = require("./helper.js");
 let pokemons = require("./mock-pokemon");
 const fs = require("fs");
-const morgan = require('morgan');
+
 
 const app = express();
 const port = process.env.PORT || 5000;
