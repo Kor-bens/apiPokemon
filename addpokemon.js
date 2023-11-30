@@ -173,7 +173,7 @@ function addPokemon() {
       })
       .catch((error) => {
         console.error("Une erreur s'est produite :", error);
-        errorMessage.textContent = "An error occurred while adding the Pokemon.";
+        errorMessage.textContent = "Problème lors de l'ajout du pokémon";
       });
   });
 
