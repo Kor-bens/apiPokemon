@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const { success, getUniqueId } = require("./helper.js");
 let pokemons = require("./mock-pokemon");
 const fs = require("fs");
-
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -20,7 +20,10 @@ app
 .use(express.static("public")) // Assuming you have a public folder for static files
 .use(favicon(__dirname + "/favicon.ico"));
 
-app.get("/", (req, res) => res.send("hello, express 38!"));
+// app.get("/", (req, res) => res.send("hello, express 38!"));
+app.get("/", (req, res) => res.sendFile('index.html', { root: 'public' }));
+
+
 
 app.get("/api/pokemons", (req, res) => {
   const message = "La liste des pokémons a bien été récupérée !";
