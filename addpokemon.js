@@ -124,7 +124,7 @@ function addPokemon() {
     
     
 
-    fetch(`http://localhost:5000/api/pokemons`, {
+    fetch(`https://pokedex-pwu3.onrender.com/api/pokemons`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
