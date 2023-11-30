@@ -19,13 +19,14 @@ app
 .use(express.urlencoded({ extended: true }))
 .use(express.static("public")) // Assuming you have a public folder for static files
 .use(favicon(__dirname + "/favicon.ico"));
+app.use(cors());
 app.use(express.static(__dirname));
 
 
 // app.get("/", (req, res) => res.send("hello, express 38!"));
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+// app.get('/', function(req, res) {
+//   res.sendFile(path.join(__dirname, 'index.html'));
+// });
 
 
 
