@@ -18,8 +18,8 @@ app
 .use(express.json())
 .use(express.urlencoded({ extended: true }))
 .use(express.static("public")) // Assuming you have a public folder for static files
-.use(favicon(__dirname + "/favicon.ico"));
-app.use(cors());
+.use(favicon(__dirname + "/favicon.ico"))
+.use(cors())
 app.use(express.static(__dirname));
 
 
