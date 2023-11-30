@@ -21,7 +21,7 @@ app
 .use(favicon(__dirname + "/favicon.ico"));
 
 // app.get("/", (req, res) => res.send("hello, express 38!"));
-app.get("/", (req, res) => res.sendFile('index.html', { root: 'public' }));
+app.get("/", (req, res) => res.sendFile('./index.html', { root: __dirname }));
 
 
 
